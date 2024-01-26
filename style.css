@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 13px;
+    
+    /* background-color: black; */
+    font-family: 'Poppins';
+    /* font-family: 'Martel Sans', sans-serif; */
+/* font-family: 'Sometype Mono', monospace; */
+}
+.home{
+    margin-bottom: 24px;
+}
+button:hover,
+span:hover,
+img:hover {
+  cursor: pointer;
+}
+body{
+    background-color: black;
+   min-width: 356px;
+}
+
+.left{
+    
+    width: 40vw;
+    height: 100vh;
+    padding: 4px;
+    /* position: fixed; */
+    z-index: 2;
+}
+
+.home ul li{
+    padding: 4px;
+    margin-left: 7px;
+    display: flex;
+    width: 17px;
+    gap: 15px;
+   
+    list-style: none;
+}
+.right{
+    
+    overflow-x: hidden ; 
+    width: 70vw;
+    height: 100%;
+    position: relative;
+    
+    /* right: -310px; */
+    /* position: fixed; */
+    overflow-y:auto;
+    z-index: 1;
+  
+}
+.visible{
+    visibility:hidden;
+  }
+
+/* --------------- */
+.template3{
+    grid-template-columns: auto auto auto;
+    width: 60vw;
+}
+.footer{
+    color: white;
+}
+
+.library{
+    min-height: 150px;
+    
+}
+
+.createbutton{
+    position: relative;
+    left: 12px;
+    padding: 2px 6px;
+}
+
+.heig{
+    height: 56px;
+    scroll-behavior: initial;
+}
+
+.ght{
+    height:300px;
+}
+
+.item1{grid-area: item1;}
+.item2{grid-area: item2;}
+.item3{grid-area: item3;}
+.item4{grid-area: item4;}
+.item5{grid-area: item5;}
+.item6{grid-area: item6;}
+.item7{grid-area: item7;}
+
+.template{
+    grid-template-areas: 'item1 item2 item3 item4 item5';
+}
+
+.template2{
+    grid-template-areas: 'item6 item7 item1 item1 item1 item1';
+}
+
+.container2{
+    margin-top: 14px;
+}
+
+
+.gap{
+    margin-top: 27px;
+}
+
+
+#id1 {
+    position: relative;
+    left: 12px;
+    font-size: 20px;
+}
+
+#id2{
+    position: relative;
+    right: 12px;
+    color: grey;
+}
+.footer{
+
+    margin-top: 33px;
+}
+.footer a{
+    font-size : 9px ;
+}
+
+.svgs{
+    flex-direction: row;
+    /* gap:10px; */
+
+
+}
+
+
+/* Player */
+
+.playmp3{
+    position: fixed;
+    bottom: 2px;
+    width: 70%;
+    background-color: #2f302e;
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    color: white;
+    align-items: center;
+    height: 54px;
+    /* border: 2px solid red;  */
+     border-radius: 34px;
+     z-index: 10;
+     /* right: 5px; */
+}
+.seekbar{
+    background-color: #ffffff;
+    width: 65%;
+    height: 3px;
+    position: fixed;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    position: relative;
+    /* bottom: 1px; */
+    left: 0%;
+    transition: left , 0.3s;
+}
+.songDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.songName {
+      font-family: 'Roboto', sans-serif;
+
+    font-weight:900;
+    font-size: 23px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 13px;
+    left: 7px;
+}
+
+.songTime {
+    position: fixed;
+    bottom: 16px;
+    right: 116px;
+}
+
+.runningTime,
+.duration {
+    color: #ffffff;
+}
+
+.circle:hover{
+    cursor: pointer;
+}
+.play:hover{
+    cursor: pointer;
+    background-color: #e4dede;
+    width: 2em;
+    filter: invert(1);
+
+}
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+  }
+.Mp3Player{
+
+    height: 50vh;
+    overflow-y: scroll;
+}
+.ola{
+    margin-left: 10px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.ola:hover{
+    cursor: pointer;
+    font-weight:bold;
+}
+
+@media screen and (max-width: 860px) {
+  
+    .minner {
+    
+    font-size: 10px;
+    }
+    .left{
+      display: none;
+    }
+
+    .right{
+      width: 100vw;
+    }
+
+    .visible{
+      visibility:visible;
+    }
+    
+    .playmp3{
+        width: 98%;
+        left: 0px;
+        /* bottom: 10px; */
+        position: fixed;
+        z-index: 20;
+    }
+    .songTime{
+        right: 23px;
+    }
+  }
