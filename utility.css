@@ -72,7 +72,7 @@
 }
 
 .todays{
-    margin-top: 5px;
+    margin-top: 10px;
     align-items: center;
     justify-content: center;
     gap: 6px;
@@ -149,11 +149,12 @@ li{
   }
 
   .box{
-    width: 140px;
+    width: 130px;
     height: 184px;
     background-color: #181818;
     border-radius: 12px;
-    margin-top: 12px;
+    margin: 12px 8px;
+
   }
 
   .box:hover{
@@ -161,11 +162,7 @@ li{
     transition: all 1s;
   }
 
-  .interIMG{
-    width: 119px;
-    height: 135px;
-    border-radius: 12px;
-  }
+
 
   .set{
     position: relative;
@@ -177,11 +174,35 @@ li{
   }
   @media screen and (max-width: 560px) {
 
+    .add{
+      width: 100vw;
 
-    .item4,
-    .item5{
-      display: none;
     }
+    .img1{
+      position: relative;
+      width: 78%;
+      height: 87%;
+      left: 34px;
+    }
+    .box{
+      width: 90vw;
+      height: 56vh;
+    }
+    .playmp3 {
+      position: fixed;
+      height: 25%;
+      bottom: 0;
+      left: 0;
+      width: 100%; /* To make it full width */
+    }
+    #id1{
+      font-size: 10vw;
+    }
+    .minsize {
+      min-width: 467px;
+  }
+
+    
   }
   @media screen and (max-width: 392px) {
 
@@ -189,4 +210,10 @@ li{
     .item3{
       display: none;
     }
+  }
+
+
+  .add{
+    flex-direction: raw;
+    flex-wrap: wrap;
   }
