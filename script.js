@@ -60,7 +60,8 @@ function playCurrentSong() {
   document.getElementById("play1").src = "pause.svg";
 }
 async function getSongs(folder) {
-  let a = await fetch(`/${folder}/`);
+  let a = await fetch(`./${folder}/`);
+  console.log(a)
   currentFolder = folder;
   let response = await a.text();
   let div = document.createElement("div");
@@ -87,29 +88,45 @@ function displaySongs() {
   taka.innerHTML = ``; // Clear the existing content
 
   songs.forEach((song, index) => {
+    if (!song) {
+      console.warn(`Skipping undefined song at index ${index}`);
+      return;
+    }
+  
     let newAud = document.createElement("div");
     newAud.className = "myclass1";
     newAud.innerHTML = `<ol class="ola">
-        <img class="invert" src="music.svg" alt="music">
-        <div>
-        <li>${song.replaceAll("%20", " ")}</li>`;
+          <img class="invert" src="music.svg" alt="music">
+          <div>
+          <li>${song.replaceAll("%20", " ")}</li>`;  
     taka.appendChild(newAud);
-
-    newAud.addEventListener("click", () => {
-      document.querySelector(".songName").innerHTML = song.replaceAll(
-        "%20",
-        " "
-      );
-      currentIndex = index;
-      playCurrentSong();
-    });
   });
+  
+  // songs.forEach((song, index) => {
+  //   let newAud = document.createElement("div");
+  //   newAud.className = "myclass1";
+  //   newAud.innerHTML = `<ol class="ola">
+  //       <img class="invert" src="music.svg" alt="music">
+  //       <div>
+  //       <li>${song.replaceAll("%20", " ")}</li>`;
+  //   taka.appendChild(newAud);
+
+  //   newAud.addEventListener("click", () => {
+  //     document.querySelector(".songName").innerHTML = song.replaceAll(
+  //       "%20",
+  //       " "
+  //     );
+  //     currentIndex = index;
+  //     playCurrentSong();
+  //   });
+  // });
 }
 
 async function displayAlbums() {
-  let a = await fetch(`/songs/`);
+  let a = await fetch(`/Songs/`);
  //let a = await fetch(`/${songs}/`);
  let response = await a.text();
+
  console.log(response)
   let div = document.createElement("div");
   div.innerHTML = response;
@@ -120,11 +137,11 @@ let array=  Array.from(anchors)
       const e = array[index];
       
     
-    if (e.href.includes("/songs")&& !e.href.includes(".htaccess")) {
+    if (e.href.includes("/Songs")&& !e.href.includes(".htaccess")) {
       let folder1 = e.href.split("/").slice(-2)[0];
       console.log(folder1);
      // let a = await fetch(`http://127.0.0.1:3000/songs/${folder1}/info.json`);
-     let a = await fetch(`/songs/${folder1}/info.json`);
+     let a = await fetch(`/Songs/${folder1}/info.json`);
 
 
       let response = await a.json();
@@ -132,7 +149,7 @@ let array=  Array.from(anchors)
       container1.innerHTML =
         container1.innerHTML +
         `<div class="box   "<div data-folder="${folder1}">
-     <img class="img1" src="/songs/${folder1}/cover.jpg" alt="No internet">
+     <img class="img1" src="/Songs/${folder1}/cover.jpg" alt="No internet">
     
      <div class="grid todays ">
        <p style="font-size: 10px" >${response.title}</p>
@@ -145,14 +162,14 @@ let array=  Array.from(anchors)
    Array.from(document.getElementsByClassName("box")).forEach((e) => {
     e.addEventListener("click", async (item) => {
    
-      await getSongs(`songs/${item.currentTarget.dataset.folder}`);
+      await getSongs(`Songs/${item.currentTarget.dataset.folder}`);
       playCurrentSong();
     });
   });
 }
 
 async function main() {
-  await getSongs("songs/happySongs"); 
+  await getSongs("./Songs/happySongs"); 
   //  playCurrentSong();
 
   
