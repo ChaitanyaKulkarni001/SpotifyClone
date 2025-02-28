@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+
+    <title>SpotifyClone - Web Player: Music for everyone</title>
+    <link class="invert" rel="shortcut icon" href="favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+  </head>
+  <body>
+    <div class="container flex justifyContentSpace">
+      <div
+        class="minsize left bgBlack border justifyContent align-item"
+        id="mySidebar"
+      >
+        <div class="home bgGrey round">
+          <ul>
+            <li>
+              <img
+                id="spotiLogo"
+                width="60"
+                class="invert"
+                src="spotiLogo.svg"
+                alt=""
+              />
+              <button class="visible" onclick="closeit()">Close</button>
+            </li>
+            <li><img class="invert" src="home.svg" alt="homeSVG" />Home</li>
+            <br />
+            <li>
+              <img class="invert" src="search.svg" alt="SearchSVG" />Search
+            </li>
+          </ul>
+        </div>
+        <!-- -------------------------------->
+
+        <div class="Mp3Player bgGrey heig ght">
+          <h3>Audio playing</h3>
+          <div class="taka">
+            <div>
+              <ol class="ola">
+                <img class="invert" src="music.svg" alt="music" />
+                <div>
+                  <li>Song name</li>
+                  <li>Created By</li>
+                </div>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <!-- Here we will create the Your library box -->
+
+        <div class="yourLib bgGrey heig ght padder2">
+          <div class="heading flex justifyContentSpace align-item">
+            <div class="flex justifyContent align-item">
+              <img class="invert wider" src="yourLibrary.svg" alt="library" />
+              <span>Your Library</span>
+            </div>
+
+            <div>
+              <img
+                class="invert flex"
+                width="12"
+                src="plusSVG.svg"
+                alt="plusSVG"
+              />
+            </div>
+          </div>
+          <div class="voidCh">
+            <div class="boXcreteplaylist bgMix round">
+              <div class="padder">
+                <p class="minner">Create your first playlist</p>
+                <p class="minner marger">it's easy,we'll help you</p>
+                <button class="createbutton round minner marger">
+                  Create playlist
+                </button>
+              </div>
+            </div>
+            <div class="padder round bgMix padder2">
+              <p class="minner">Let's find some podcasts to follow</p>
+              <p class="minner marger">We'll keep you updated on new episodes</p>
+              <button class="createbutton round minner marger">
+                <span> Browse Podcasts </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="grider gap">
+            <div>
+              <a href="#
+                ><span data-encore-id="type">Legal</span></a
+              >
+            </div>
+            <div>
+              <a href="#"
+                ><span data-encore-id="type">Privacy Center</span></a
+              >
+            </div>
+            <div>
+              <a href="#"
+                ><span data-encore-id="type">Privacy Policy</span></a
+              >
+            </div>
+            <div>
+              <a href="#"
+                ><span data-encore-id="type">Cookies</span></a
+              >
+            </div>
+            <div>
+              <a href="#"
+                ><span data-encore-id="type">About Ads</span></a
+              >
+            </div>
+            <div>
+              <a href="#"
+                ><span data-encore-id="type">Accessibility</span></a
+              >
+            </div>
+
+            <a
+              draggable="false"
+              href="#"
+              target="_blank"
+              rel="noopener"
+              ><span data-encore-id="text">Cookies</span></a
+            >
+          </div>
+
+          <div class="gap">
+            <button class="roundbut eng flex">
+              <img
+                class="invert"
+                width="15"
+                src="english.svg"
+                alt="english"
+              /><span> &nbsp English </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- right -->
+        <div class="right border justifyContent align-item bgBlack pos">
+          <div class="playlist">
+            <div class="header flex justifyContentSpace">
+              <div class="left1">
+                <button class="roundbut visible" onclick="w3_open()">☰</button>
+                <button class="lessThan roundbut"><</button>
+                <button class="greatThan roundbut">></button>
+              </div>
+              <div class="right1">
+                <span style="display: none;" class="login">Sign up</span>
+                <button style="display: none;" class="login2 roundbut2 changecolor">Log in</button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="spotiplaylist flex justifyContentSpace align-item padder3 bgMix"
+          >
+            <h3 id="id1">Playlists</h3>
+            <span id="id2">show all</span>
+          </div>
+          <div class="container flex template add p">
+            <!-- <div class="box   " data-folder = "Bollywood">
+              <img class="img1" src="https://ichef.bbci.co.uk/news/976/cpsprodpb/159D0/production/_129082588_gettyimages-1241855988.jpg" alt="No internet">
+             
+              <div class="grid todays ">
+                <p style="font-size: 10px" >Today's top picks!</p>
+                <p style="font-size: 8px">Here are some pickes for you!</p>
+              </div>
+            </div> -->
+
+            <!-- <div class="box  border" data-folder="happySongs">
+              <img
+              class="interIMG set"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzbOa1l64nUXOVgueZjBvOlmsNrrDp5V2zNw&usqp=CAU"
+              />
+              <div class="grid todays">
+                <p style="font-size: 10px" >Day Dreamer</p>
+                <p style="font-size: 8px">enthraling Instruments</p>
+              </div>
+            </div>  -->
+          </div> <!--
+            <div class="box item3 border">
+              <img
+                class="interIMG set"
+                src="https://i.scdn.co/image/ab67706f0000000281722192322800ae99c2ed06"
+                alt=" "
+              />
+              <div class="grid todays">
+                <p style="font-size: 10px">Just Sleep!</p>
+                <p style="font-size: 8px">Instrumental beats for good night</p>
+              </div>
+            </div>
+            <div class="box item4 media border">
+              <img
+                class="interIMG set"
+                src="https://i.scdn.co/image/ab67706f000000028998614b3281e12596844039"
+                alt=""
+              />
+              <div class="grid todays">
+                <p style="font-size: 10px">Night Rain!</p>
+                <p style="font-size: 8px">Sounds of porting rain</p>
+              </div>
+            </div>
+            <div class="box item5 media border">
+              <img
+                class="interIMG set"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMFM1GQDdpRPMKEhMZ8RmARa502E0HcWEv1c1FccOWswvzoyAF1AfmQfvxZmfXQeFhxPg&usqp=CAU"
+                alt=""
+              />
+              <div class="grid todays">
+                <p style="font-size: 10px" >Piano </p>
+                <p style="font-size: 8px">Gentle Abmbicient piano</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container2 grid template2">
+            <div class="box item6 border">
+              <img
+                class="interIMG set"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU5x3GEOrYwUQoX7VyjzQM2yIsFqVfGMZBPIIkFFCFb2I189scUfNoYdoq7HRlNn3qXzE&usqp=CAU"
+                alt=""
+              />
+              <div class="grid todays">
+                <p style="font-size: 10px" >Today's top picks!</p>
+                <p style="font-size: 8px">Here are some pickes for you!</p>
+              </div>
+            </div>
+            <div class="box item7 border">
+              <img
+                class="interIMG set"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPuiUHkyd36DJvgvGIPq187a42SY8An4G8Oa7v3eDwFfhMy6tnXuSHrDbp2NLXJ1M5wJM&usqp=CAU"
+                alt=""
+              />
+              <div class="grid todays">
+                <p style="font-size: 10px" >Today's top picks!</p>
+                <p style="font-size: 8px">Here are some pickes for you!</p>
+              </div>
+            </div> 
+          </div> -->
+
+          <div class="playmp3">
+            
+            <img class="invert play" id="play0" src="prev.svg" alt="play">
+           
+            <img class="invert play" id="play1" src="play.svg" alt="play">
+            <img class="invert play" id="play2" src="next.svg" alt="play">
+
+            
+             
+            <div class="seekbar changecolor">
+              <div class="circle"></div>
+              <span class="songDetails">
+                  <span class="songName"></span>
+                  <span class="songTime">
+                      <span class="runningTime">00:00</span>
+                      <span class="separator">/</span>
+                      <span class="duration">00:00</span>
+                  </span>
+              </span>
+          </div>
+      </div>
+            
+          </div>
+          <section class="footer">
+            <div>
+              <div class="grid template3">
+                <div>
+                  <p>Company</p>
+                  <li>
+                    <a href="#"
+                      >About</a
+                    >
+                  </li>
+                  <li><a href="#">Jobs</a></li>
+                  <li>
+                    <a href="#">For the Record</a>
+                  </li>
+                </div>
+                <div>
+                  <p>Communities</p>
+                  <li>
+                    <a href="#">For Artists</a>
+                  </li>
+                  <li>
+                    <a href="#">Developers</a>
+                  </li>
+                  <li><a href="#">Advertising</a></li>
+                  <li>
+                    <a href="#">Investors</a>
+                  </li>
+                  <li><a href="#">Vendors</a></li>
+                </div>
+                <div>
+                  <p>Useful links</p>
+                  <a href="#">Support</a>
+                  <a href="#"
+                    >Free Mobile App</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="flex svgs">
+              <a class="invert" href="#"
+                ><img src="insta.svg" alt="instaSVG "
+              /></a>
+              <a class="invert" href="#"
+                ><img src="twitter.svg" alt="twiiter"
+              /></a>
+              <a class="invert" href="#"
+                ><img src="facebook.svg" alt="facebook"
+              /></a>
+            </div>
+
+            <!-- <audio id="myAudio" src="Ant.mp3" controls></audio>
+            <button id="playButton">Play/Pause</button> -->
+
+            <hr />
+            <p>© 2024 Spotify_Clone AB</p>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
